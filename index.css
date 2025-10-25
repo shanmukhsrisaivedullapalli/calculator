@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: #fff;
+}
+
+.calculator {
+    width: 360px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.calculator:hover {
+    transform: scale(1.02);
+}
+
+.inputbox {
+    padding: 25px;
+    text-align: right;
+    font-size: 2rem;
+    color: #00ffcc;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    word-wrap: break-word;
+    overflow-x: auto;
+}
+
+.numpad {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 12px;
+    padding: 20px;
+}
+
+input[type="button"] {
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.07);
+    color: #fff;
+    transition: all 0.15s ease;
+}
+
+input[type="button"]:hover {
+    transform: scale(0.96);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+input[type="button"]:active {
+    transform: scale(0.92);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.operator {
+    background: rgba(0, 153, 255, 0.25);
+    color: #00c8ff;
+}
+
+.operator:hover {
+    background: rgba(0, 153, 255, 0.35);
+}
+
+.allclear {
+    background: rgba(255, 51, 51, 0.3);
+    color: #ff6666;
+}
+
+.allclear:hover {
+    background: rgba(255, 51, 51, 0.4);
+}
+
+.submit {
+    background: rgba(0, 255, 136, 0.35);
+    color: #00ff99;
+    grid-column: span 1;
+}
+
+.submit:hover {
+    background: rgba(0, 255, 136, 0.45);
+}
+
+.number {
+    color: #fff;
+}
